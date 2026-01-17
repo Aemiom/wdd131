@@ -1,0 +1,68 @@
+:root {
+    --primary-color: blue;
+  --secondary-color: rgb(144, 206, 144);
+  --accent1-color: black;
+  --accent2-color: #979797; 
+  --heading-font: "Times New Roman";
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Barriecito", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+header h1 {
+    font-weight: 100;
+    background-color:var(--accent2-color) ;
+}
+header span {
+    display:block;
+    text-align: center;
+    padding: none;
+    text-decoration: none;
+    font-size: xx-large;
+}
+nav {
+    display:flex;
+    justify-content: space-around;
+    background-color: var(--secondary-color);
+}
+nav a:hover {
+    border: 1px solid black;
+    text-decoration: overline;
+
+}
+main{
+    text-align: center;
+    min-width: 10;
+
+}
+main h1{
+        font-size: 59px;
+
+}
+.card{
+        display: grid;
+        max-width: 50%;
+        grid-template-columns: 2fr 1fr;
+    border: 3px solid black;
+}
+.card p{
+    grid-column-start: 1;
+    grid-row-start:2;
+    max-width: 50%;
+    justify-self:center;
+
+}
+
+.card img{
+    max-width: 350px;
+justify-self:end;
+    grid-column-start: 2;
+    grid-row-start:2;
+
+}
