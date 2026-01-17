@@ -15,14 +15,14 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-header h1 {
+header{
     font-weight: 100;
     background-color:var(--accent2-color) ;
 }
 header span {
     display:block;
     text-align: center;
-    padding: none;
+    padding: 0;
     text-decoration: none;
     font-size: xx-large;
 }
@@ -38,7 +38,7 @@ nav a:hover {
 }
 main{
     text-align: center;
-    min-width: 10;
+    min-width: 10px;
 
 }
 main h1{
@@ -65,4 +65,8 @@ justify-self:end;
     grid-column-start: 2;
     grid-row-start:2;
 
+}
+footer{
+    text-align: center;
+    background-color: var(--accent2-color);
 }
