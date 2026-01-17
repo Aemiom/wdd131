@@ -45,20 +45,33 @@ main h1{
         font-size: 59px;
 
 }
+.grid{
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 1fr 1fr;
+    
+}
 .card{
-        display: grid;
-        max-width: 50%;
-        grid-template-columns: 2fr 1fr;
+    padding: 3rem;
     border: 3px solid black;
+    margin: 3rem;
+
+}
+.card h2{
+    background-color: var(--accent2-color);
 }
 .card p{
     grid-column-start: 1;
     grid-row-start:2;
-    max-width: 50%;
     justify-self:center;
+    text-align: left;
+    font-size: 2rem;
 
 }
-
+.card h3{
+    font-size: 2.5rem;
+    border-bottom:1px solid black;
+}
 .card img{
     max-width: 350px;
 justify-self:end;
