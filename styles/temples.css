@@ -40,7 +40,6 @@ main{
 }
 body {
   font-family: "Honk", system-ui;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-variation-settings:
@@ -72,7 +71,6 @@ body {
 }
 figure img{
   max-width: 50%;
-  max-height: auto;
 }
 footer{
     text-align: center;
