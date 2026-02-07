@@ -16,7 +16,12 @@ burger.textContent =
     List.classList.contains("active") ? "x" : "☰";
 });
 
-        
+const homelink = document.querySelector("#home");
+const oldtempleslink = document.querySelector("#old");
+const newtempleslink = document.querySelector("#new");
+const largetempleslink = document.querySelector("#large");
+const smalltempleslink = document.querySelector("#small");
+
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -77,7 +82,7 @@ const temples = [
     {
     templeName: "Belém Brazil",
     location: "Parque Verde, Brazil",
-    dedicated: "20, November, 2022 ",
+    dedicated: "2022 ,20, November,",
     area: 28675,
     imageUrl:
     "https://churchofjesuschristtemples.org/assets/img/temples/belem-brazil-temple/belem-brazil-temple-31310-main.jpg"
@@ -85,7 +90,7 @@ const temples = [
     {
     templeName: "Brigham City Utah",
     location: "Brigham City, Utah",
-    dedicated: "31, July, 2010",
+    dedicated: "2010, 31, July,",
     area: 36000,
     imageUrl:
     "https://churchofjesuschristtemples.org/assets/img/temples/brigham-city-utah-temple/brigham-city-utah-temple-39612-main.jpg"
@@ -93,10 +98,70 @@ const temples = [
     {
     templeName: "Cochabamba Bolivia",
     location: "Alto Queru Queru",
-    dedicated: "10, November, 1996",
+    dedicated: "1996, 10, November,",
     area: 35500,
     imageUrl:
     "https://churchofjesuschristtemples.org/assets/img/temples/cochabamba-bolivia-temple/cochabamba-bolivia-temple-13721-main.jpg"
   },
 ];
 
+createTempleCard(temples);
+
+function createTempleCard(filteredtemples) {
+    document.querySelector(".grid").innerHTML = "";
+  filteredtemples.forEach(temple => {
+
+    let card = document.createElement("section");
+    let name = document.createElement("h2");
+    let location = document.createElement("p");
+    let dedication = document.createElement("p");
+    let area = document.createElement("p");
+    let img = document.createElement("img");
+
+    name.textContent = temple.templeName;
+
+    location.innerHTML =
+      `<span class="label">Location:</span> ${temple.location}`;
+
+    dedication.innerHTML =
+      `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+
+    area.innerHTML =
+      `<span class="label">Size:</span> ${temple.area} sq ft`;
+
+    img.setAttribute("src", temple.imageUrl);
+    img.setAttribute("alt", `${temple.templeName} Temple`);
+    img.setAttribute("loading", "lazy");
+
+    card.appendChild(name);
+    card.appendChild(location);
+    card.appendChild(dedication);
+    card.appendChild(area);
+    card.appendChild(img);
+
+    document.querySelector(".grid").appendChild(card);
+  });
+}
+function getYear(temple) {
+  return parseInt(temple.dedicated.split(",")[0]);
+}
+
+
+homelink.addEventListener("click", () => {
+    createTempleCard(temples);
+})
+
+
+
+oldtempleslink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => getYear(temple) < 2000));
+})
+newtempleslink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => getYear(temple) > 1999));
+})
+largetempleslink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.area > 90000));
+})
+smalltempleslink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.area < 10000));
+})
