@@ -154,10 +154,10 @@ homelink.addEventListener("click", () => {
 
 
 oldtempleslink.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => getYear(temple) < 2000));
+    createTempleCard(temples.filter(temple => getYear(temple) < 1900));
 })
 newtempleslink.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => getYear(temple) > 1999));
+    createTempleCard(temples.filter(temple => getYear(temple) > 2000));
 })
 largetempleslink.addEventListener("click", () => {
     createTempleCard(temples.filter(temple => temple.area > 90000));
