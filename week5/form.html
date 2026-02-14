@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WWD131 - Form - Tanner Dustin</title>
+    <meta name="author" content="Tanner Dustin">
+    <meta name="description" content="WDD 131 - Week 5 form assignment for product review.">
+  <link rel="stylesheet" href="styles/form.css">
+<script src="scripts/form.js" defer></script>
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>
+            Product Review
+        </h1>
+    </header>
+    <form method="get" action="review.html">
+        <div class="form-items">
+            <label for="product">Product Name * </label>
+            <select id="product" name="product" required>
+            <option value="" disabled selected>Select a Product ...</option>    
+            </select>
+        </div>
+        <div>
+            Overall Rating
+        </div>
+        <fieldset class="form-items">
+            <input type="radio" id="rating1" name="rating" value="1" required> <label for="rating1">1</label>
+            <input type="radio" id="rating2" name="rating" value="2"> <label for="rating2">2</label>
+            <input type="radio" id="rating3" name="rating" value="3"> <label for="rating3">3</label>
+            <input type="radio" id="rating4" name="rating" value="4"> <label for="rating4">4</label>
+            <input type="radio" id="rating5" name="rating" value="5"> <label for="rating5">5</label>
+        </fieldset>
+
+        <div class="form-items">
+            <label for="indate">Date of Installation</label>
+            <input type="date" id="indate" name="indate" required>
+        </div>
+
+        <fieldset class="form-items">
+            <legend>Select the features you found useful.(check all that apply)</legend>
+            <input type="checkbox" id="durability" name="features" value="durability"> <label for="durability">Durability</label>
+            <input type="checkbox" id="ease" name="features" value="ease"> <label for="ease">Ease of use</label>
+            <input type="checkbox" id="performance" name="features" value="performance"> <label for="performance">Performance</label>
+            <input type="checkbox" id="design" name="features" value="design"> <label for="design">Design</label>
+        </fieldset>
+
+        <div class="form-items">
+            <label for="review">Review (optional)</label>
+            <textarea id="review" name="review"></textarea>
+        </div>
+        <div class="form-items">          <label for="uname">Your Name (Optional)</label>
+          <input id="uname" type="text" name="uname">
+        </div>
+        <input type="submit" value="Post Review">
+
+    </form>
+    <footer>
+        <p>© <span id="currentyear"></span> Tanner Dustin, Utah</p>
+        <p id="LastModified"></p>
+    </footer>
+</body>
