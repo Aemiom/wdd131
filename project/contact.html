@@ -7,6 +7,7 @@
     <meta name="author" content="Tanner Dustin">
     <meta name="description" content="WDD 131 - Contact page of the website where you can contact me here.">
     <link rel="stylesheet" href="/project/styles/project.css">
+    <script src="scripts/project.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -24,7 +25,7 @@
         <a href="TannerTheDean.html">Home</a>
     </nav>
         <div class="form">
-                    <form>
+                    <form id="contactForm">
                         <label>Name</label>
                         <input type="text" id="name" name="name" required>
 
@@ -44,6 +45,7 @@
 
 
                     </form>
+                    <div id="submissions"></div>
                 </div>
      <main>
        <img src="images/logo.jpg" alt="logo of me, TannerTheDean" class="background" loading="lazy"> 
