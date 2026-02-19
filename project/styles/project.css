@@ -1,0 +1,117 @@
+:root {
+    --primary-color: blue;
+  --secondary-color: rgb(173, 19, 204);
+  --accent1-color: black;
+  --accent2-color: #ff9d9d; 
+  --heading-font: "Times New Roman";
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h2, h1{
+    color:var(--primary-color)
+}
+p{
+    color:var(--secondary-color)
+}
+
+body {
+  font-family: "Kaushan Script", cursive;
+  margin:0;
+  height: 100%;
+}
+.social{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--accent2-color);
+}
+.social img {
+  width: 80px;
+  height: auto;
+}
+.pages{
+
+display:flex;
+gap: 80rem;
+  width: 100%;
+  padding: 1rem;
+  justify-content: center;
+}
+.pages a {
+  font-size: 200%;
+  height: auto;
+  background-color: var(--accent2-color);
+  width: 5%;
+}
+.background{
+  position: fixed;      
+  top: 80px;
+  left: 0;
+  width: 100vw;         
+  height: 100vh;       
+      object-fit: contain;
+  z-index: -1;   
+  
+
+}
+@media (max-width: 1600px) {
+
+  .pages {
+    gap: 20rem; 
+  }
+
+}
+.form {
+  max-width: 500px;       
+  margin: 2rem auto;    
+  padding: 1rem;
+  border: solid black;
+  background-color: var(--accent2-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column; 
+  gap: 1rem;          
+}
+
+form label {
+  font-weight: bold;
+  display:flex;
+  align-items: center;
+  gap:.5rem ;
+  max-width: 8rem;
+}
+
+form input,
+form textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+form button {
+  padding: 0.7rem;
+  font-size: 1rem;
+}
+.video-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 1rem;
+  text-align: center;
+  border:solid black 5px;
+  background-color: var(--accent2-color);
+}
+.video-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  background-color: var(--accent2-color);
+}
+.video-section iframe{
+  border:solid black 5px;
+}
