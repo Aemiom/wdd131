@@ -13,11 +13,18 @@ function saveSubmission(event) {
   const purpose = document.querySelector('input[name="purpose"]:checked')?.value;
   const message = document.getElementById("message").value;
 
+  if (!name || !email || !purpose || !message) {
+  alert("Fill everything out brotha");
+  return;
+  }
+
   const submission = { name, email, purpose, message, date: new Date().toLocaleString() };
   submissions.push(submission);
   localStorage.setItem("submissions", JSON.stringify(submissions));
   displaySubmissions();
   form.reset();
+
+  
 }
 function displaySubmissions() {
 
